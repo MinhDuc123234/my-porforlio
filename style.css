@@ -1,81 +1,64 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
+/* Toggle Button */
+.toggle-container {
+  display: flex;
+  justify-content: flex-end;
+  margin: 10px 0;
 }
 
+#mode-toggle {
+  background-color: #0077cc;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+#mode-toggle:hover {
+  background-color: #005fa3;
+}
+
+/* Light mode (default) */
 body {
-  line-height: 1.6;
-  background-color: #f4f4f4;
+  background-color: #f0f4f8;
   color: #333;
-  padding: 20px;
-  max-width: 800px;
-  margin: auto;
+  transition: background-color 0.4s, color 0.4s;
 }
 
-header {
-  text-align: center;
-  margin-bottom: 30px;
+nav {
+  background-color: #002f4b;
 }
 
-header h1 {
-  font-size: 2.5em;
-  color: #222;
+/* Dark mode styles */
+body.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
 }
 
-header p {
-  font-size: 1.2em;
-  color: #666;
+body.dark-mode nav {
+  background-color: #1f1f1f;
 }
 
-section {
-  margin-bottom: 40px;
+body.dark-mode a {
+  color: #90caf9;
 }
 
-h2 {
-  border-bottom: 2px solid #ddd;
-  padding-bottom: 5px;
-  margin-bottom: 15px;
-  color: #005f73;
+body.dark-mode #mode-toggle {
+  background-color: #444;
+  color: #fff;
 }
 
-.project {
-  margin-bottom: 20px;
+body.dark-mode #mode-toggle:hover {
+  background-color: #666;
 }
 
-.project a {
-  color: #0077cc;
-  text-decoration: none;
+body.dark-mode .recommendations blockquote {
+  background-color: #1e1e1e;
+  border-left-color: #00d4ff;
 }
 
-.project a:hover {
-  text-decoration: underline;
-}
-
-.skills ul {
-  list-style-type: square;
-  padding-left: 20px;
-}
-
-.recommendations blockquote {
-  background: #fff;
-  border-left: 5px solid #00b4d8;
-  padding: 15px 20px;
-  margin-bottom: 15px;
-  font-style: italic;
-}
-
-.recommendations footer {
-  text-align: right;
-  font-size: 0.9em;
-  margin-top: 10px;
-  color: #555;
-}
-
-footer {
-  text-align: center;
-  font-size: 0.8em;
-  color: #888;
-  margin-top: 40px;
+body.dark-mode footer {
+  color: #aaa;
 }
