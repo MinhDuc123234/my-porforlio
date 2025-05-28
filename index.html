@@ -1,4 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Portfolio - ChatGPT</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
 <body>
+  <!-- NAVIGATION -->
   <nav>
     <ul>
       <li><a href="#about">About Me</a></li>
@@ -9,32 +18,101 @@
     </ul>
   </nav>
 
+  <!-- DARK MODE TOGGLE -->
   <div class="toggle-container">
     <button id="mode-toggle">🌙 Dark Mode</button>
   </div>
 
+  <!-- HEADER -->
   <header>
     <h1>ChatGPT - AI Engineer</h1>
-    ...
+    <p>Multimodal AI Enthusiast | NLP & Computer Vision</p>
   </header>
 
-  <!-- Các section khác giữ nguyên -->
+  <!-- ABOUT -->
+  <section id="about" class="about">
+    <h2>About Me</h2>
+    <p>
+      I'm ChatGPT, an AI engineer passionate about building intelligent systems that can understand, see, and converse with humans. My current focus is on multimodal learning, computer vision, and natural language processing. I believe AI should amplify human potential — not replace it.
+    </p>
+  </section>
 
+  <!-- PROJECTS -->
+  <section id="projects" class="projects">
+    <h2>Projects</h2>
+
+    <div class="project">
+      <h3>1. Emotion Recognition from Text</h3>
+      <p>Built an NLP model using BERT to classify emotional tones in text messages.</p>
+      <p><strong>Tech:</strong> Python, HuggingFace Transformers, Scikit-learn</p>
+      <a href="#">GitHub Repo</a>
+    </div>
+
+    <div class="project">
+      <h3>2. Face Recognition System</h3>
+      <p>Developed a real-time facial recognition system using CNN and OpenCV.</p>
+      <p><strong>Tech:</strong> Python, TensorFlow, OpenCV</p>
+      <a href="#">GitHub Repo</a>
+    </div>
+
+    <div class="project">
+      <h3>3. AI Chatbot for FAQ</h3>
+      <p>Created a smart chatbot that answers user queries using fine-tuned GPT-2.</p>
+      <p><strong>Tech:</strong> Python, GPT-2, Flask</p>
+      <a href="#">GitHub Repo</a>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="skills">
+    <h2>Skills</h2>
+    <ul>
+      <li>Python</li>
+      <li>SQL</li>
+      <li>Deep Learning (PyTorch, TensorFlow)</li>
+      <li>Computer Vision</li>
+      <li>Natural Language Processing (NLP)</li>
+      <li>Git & Docker</li>
+    </ul>
+  </section>
+
+  <!-- RECOMMENDATIONS -->
+  <section id="recommendations" class="recommendations">
+    <h2>Recommendations</h2>
+
+    <blockquote>
+      “ChatGPT always brings clarity and depth to AI solutions. Reliable and creative in every project.”
+      <footer>- A Fellow Researcher</footer>
+    </blockquote>
+
+    <blockquote>
+      “Extremely helpful in building explainable AI models. Excellent communicator!”
+      <footer>- AI Mentor</footer>
+    </blockquote>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact">
+    <h2>Contact</h2>
+    <p>Email: chatgpt@openai.com</p>
+    <p>LinkedIn: linkedin.com/in/chatgpt</p>
+    <p>GitHub: github.com/chatgpt</p>
+  </section>
+
+  <!-- FOOTER -->
   <footer>
-    ...
+    <p>© 2025 ChatGPT Portfolio. All rights reserved.</p>
   </footer>
 
+  <!-- DARK MODE SCRIPT -->
   <script>
     const toggleBtn = document.getElementById("mode-toggle");
     const body = document.body;
 
     toggleBtn.addEventListener("click", () => {
       body.classList.toggle("dark-mode");
-      if (body.classList.contains("dark-mode")) {
-        toggleBtn.textContent = "☀️ Light Mode";
-      } else {
-        toggleBtn.textContent = "🌙 Dark Mode";
-      }
+      toggleBtn.textContent = body.classList.contains("dark-mode") ? "☀️ Light Mode" : "🌙 Dark Mode";
     });
   </script>
 </body>
+</html>
