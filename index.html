@@ -7,10 +7,11 @@
   <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-  <!-- NAVIGATION -->
   <nav>
     <ul>
-      <li><a href="#about">About Me</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#education">Education</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#recommendations">Recommendations</a></li>
@@ -18,29 +19,40 @@
     </ul>
   </nav>
 
-  <!-- DARK MODE TOGGLE -->
   <div class="toggle-container">
     <button id="mode-toggle">🌙 Dark Mode</button>
   </div>
 
-  <!-- HEADER -->
   <header>
     <h1>ChatGPT - AI Engineer</h1>
     <p>Multimodal AI Enthusiast | NLP & Computer Vision</p>
   </header>
 
-  <!-- ABOUT -->
-  <section id="about" class="about">
+  <section id="about">
     <h2>About Me</h2>
     <p>
-      I'm ChatGPT, an AI engineer passionate about building intelligent systems that can understand, see, and converse with humans. My current focus is on multimodal learning, computer vision, and natural language processing. I believe AI should amplify human potential — not replace it.
+      I'm ChatGPT, an AI engineer passionate about building intelligent systems that understand language, vision and beyond. My mission is to create human-centered AI that enhances life and work.
     </p>
   </section>
 
-  <!-- PROJECTS -->
-  <section id="projects" class="projects">
-    <h2>Projects</h2>
+  <section id="experience">
+    <h2>Experience</h2>
+    <ul class="timeline">
+      <li><strong>2023–Now:</strong> AI Researcher at OpenAI – Multimodal and LLM development</li>
+      <li><strong>2021–2023:</strong> Machine Learning Engineer at AI Labs – NLP projects</li>
+    </ul>
+  </section>
 
+  <section id="education">
+    <h2>Education</h2>
+    <ul class="timeline">
+      <li><strong>2017–2021:</strong> B.Sc. in Computer Science – Stanford University</li>
+      <li><strong>2022–2024:</strong> M.Sc. in Artificial Intelligence – MIT (online program)</li>
+    </ul>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
     <div class="project">
       <h3>1. Emotion Recognition from Text</h3>
       <p>Built an NLP model using BERT to classify emotional tones in text messages.</p>
@@ -54,65 +66,48 @@
       <p><strong>Tech:</strong> Python, TensorFlow, OpenCV</p>
       <a href="#">GitHub Repo</a>
     </div>
-
-    <div class="project">
-      <h3>3. AI Chatbot for FAQ</h3>
-      <p>Created a smart chatbot that answers user queries using fine-tuned GPT-2.</p>
-      <p><strong>Tech:</strong> Python, GPT-2, Flask</p>
-      <a href="#">GitHub Repo</a>
-    </div>
   </section>
 
-  <!-- SKILLS -->
-  <section id="skills" class="skills">
+  <section id="skills">
     <h2>Skills</h2>
-    <ul>
+    <ul class="skills-list">
       <li>Python</li>
       <li>SQL</li>
-      <li>Deep Learning (PyTorch, TensorFlow)</li>
+      <li>Deep Learning</li>
       <li>Computer Vision</li>
-      <li>Natural Language Processing (NLP)</li>
+      <li>NLP</li>
       <li>Git & Docker</li>
     </ul>
   </section>
 
-  <!-- RECOMMENDATIONS -->
-  <section id="recommendations" class="recommendations">
+  <section id="recommendations">
     <h2>Recommendations</h2>
-
     <blockquote>
-      “ChatGPT always brings clarity and depth to AI solutions. Reliable and creative in every project.”
-      <footer>- A Fellow Researcher</footer>
-    </blockquote>
-
-    <blockquote>
-      “Extremely helpful in building explainable AI models. Excellent communicator!”
-      <footer>- AI Mentor</footer>
+      “ChatGPT brings clarity and creativity to every AI challenge.”  
+      <footer>- Research Collaborator</footer>
     </blockquote>
   </section>
 
-  <!-- CONTACT -->
-  <section id="contact" class="contact">
+  <section id="contact">
     <h2>Contact</h2>
     <p>Email: chatgpt@openai.com</p>
     <p>LinkedIn: linkedin.com/in/chatgpt</p>
     <p>GitHub: github.com/chatgpt</p>
   </section>
 
-  <!-- FOOTER -->
   <footer>
     <p>© 2025 ChatGPT Portfolio. All rights reserved.</p>
   </footer>
 
-  <!-- DARK MODE SCRIPT -->
   <script>
     const toggleBtn = document.getElementById("mode-toggle");
     const body = document.body;
-
-    toggleBtn.addEventListener("click", () => {
+    toggleBtn.onclick = () => {
       body.classList.toggle("dark-mode");
-      toggleBtn.textContent = body.classList.contains("dark-mode") ? "☀️ Light Mode" : "🌙 Dark Mode";
-    });
+      toggleBtn.textContent = body.classList.contains("dark-mode")
+        ? "☀️ Light Mode"
+        : "🌙 Dark Mode";
+    };
   </script>
 </body>
 </html>
