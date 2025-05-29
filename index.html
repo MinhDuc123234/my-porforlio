@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
+  <!-- NAVIGATION -->
   <nav>
     <ul>
       <li><a href="#about">About</a></li>
@@ -18,23 +19,26 @@
     </ul>
   </nav>
 
+  <!-- DARK MODE TOGGLE -->
   <div class="toggle-container">
     <button id="mode-toggle">🌙 Dark Mode</button>
   </div>
 
-  <header>
+  <!-- HEADER -->
+  <header class="reveal">
     <h1>ChatGPT - AI Engineer</h1>
     <p>Multimodal AI Enthusiast | NLP & Computer Vision</p>
   </header>
 
-  <section id="about">
+  <!-- SECTIONS -->
+  <section id="about" class="reveal">
     <h2>About Me</h2>
     <p>
       I'm ChatGPT, an AI engineer passionate about building intelligent systems that understand language, vision and beyond. My mission is to create human-centered AI that enhances life and work.
     </p>
   </section>
 
-  <section id="experience">
+  <section id="experience" class="reveal">
     <h2>Experience</h2>
     <ul class="timeline">
       <li><strong>2023–Now:</strong> AI Researcher at OpenAI – Multimodal and LLM development</li>
@@ -42,7 +46,7 @@
     </ul>
   </section>
 
-  <section id="education">
+  <section id="education" class="reveal">
     <h2>Education</h2>
     <ul class="timeline">
       <li><strong>2017–2021:</strong> B.Sc. in Computer Science – Stanford University</li>
@@ -50,7 +54,7 @@
     </ul>
   </section>
 
-  <section id="projects">
+  <section id="projects" class="reveal">
     <h2>Projects</h2>
     <div class="project">
       <h3>1. Emotion Recognition from Text</h3>
@@ -67,7 +71,7 @@
     </div>
   </section>
 
-  <section id="skills">
+  <section id="skills" class="reveal">
     <h2>Skills</h2>
     <ul class="skills-list">
       <li>Python</li>
@@ -79,18 +83,20 @@
     </ul>
   </section>
 
-  <section id="contact">
+  <section id="contact" class="reveal">
     <h2>Contact</h2>
     <p>Email: chatgpt@openai.com</p>
     <p>LinkedIn: linkedin.com/in/chatgpt</p>
     <p>GitHub: github.com/chatgpt</p>
   </section>
 
-  <footer>
+  <footer class="reveal">
     <p>© 2025 ChatGPT Portfolio. All rights reserved.</p>
   </footer>
 
+  <!-- JAVASCRIPT -->
   <script>
+    // DARK MODE TOGGLE
     const toggleBtn = document.getElementById("mode-toggle");
     const body = document.body;
     toggleBtn.onclick = () => {
@@ -99,6 +105,24 @@
         ? "☀️ Light Mode"
         : "🌙 Dark Mode";
     };
+
+    // SCROLL ANIMATION
+    const reveals = document.querySelectorAll('.reveal');
+
+    function revealOnScroll() {
+      for (let i = 0; i < reveals.length; i++) {
+        const windowHeight = window.innerHeight;
+        const elementTop = reveals[i].getBoundingClientRect().top;
+        const revealPoint = 100;
+
+        if (elementTop < windowHeight - revealPoint) {
+          reveals[i].classList.add('visible');
+        }
+      }
+    }
+
+    window.addEventListener('scroll', revealOnScroll);
+    window.addEventListener('load', revealOnScroll);
   </script>
 </body>
 </html>
