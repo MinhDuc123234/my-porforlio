@@ -1,7 +1,7 @@
 /* GLOBAL SCROLL BEHAVIOR */
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 45px; /* Điều chỉnh theo chiều cao navbar */
+  scroll-padding-top: 64px; /* khớp với chiều cao nav */
 }
 
 body {
@@ -17,10 +17,12 @@ body {
 /* NAVIGATION */
 nav {
   background: #333;
-  padding: 12px 0;
+  height: 64px;            /* cố định chiều cao nav */
+  line-height: 64px;       /* căn giữa văn bản theo chiều dọc */
   position: sticky;
   top: 0;
   z-index: 10;
+  padding: 0;              /* bỏ padding gây lệch */
 }
 
 nav ul {
@@ -28,12 +30,16 @@ nav ul {
   display: flex;
   justify-content: center;
   gap: 25px;
+  margin: 0;
+  padding: 0;
 }
 
 nav a {
   color: white;
   text-decoration: none;
   font-weight: bold;
+  display: inline-block;
+  padding: 0 12px;  /* tạo khoảng cách ngang */
 }
 
 nav a:hover {
