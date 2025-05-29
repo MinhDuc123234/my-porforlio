@@ -1,7 +1,7 @@
 /* GLOBAL SCROLL BEHAVIOR */
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 60px; /* Điều chỉnh theo chiều cao navbar */
+  scroll-padding-top: 45px; /* Điều chỉnh theo chiều cao navbar */
 }
 
 body {
