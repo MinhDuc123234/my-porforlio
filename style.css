@@ -1,7 +1,7 @@
 /* GLOBAL SCROLL BEHAVIOR */
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 64px; /* khớp với chiều cao nav */
+  scroll-padding-top: 75px; /* khớp với chiều cao nav */
 }
 
 body {
@@ -17,8 +17,8 @@ body {
 /* NAVIGATION */
 nav {
   background: #333;
-  height: 64px;            /* cố định chiều cao nav */
-  line-height: 64px;       /* căn giữa văn bản theo chiều dọc */
+  height: 75px;            /* cố định chiều cao nav */
+  line-height: 75px;       /* căn giữa văn bản theo chiều dọc */
   position: sticky;
   top: 0;
   z-index: 10;
